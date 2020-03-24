@@ -1,0 +1,11 @@
+Added Link to review in the Most Popular sidebar block
+Added full grid for reviews and bookies
+Added sitemap Feature
+FAQ spacing enlarged
+Bonus codes minor visual bug fixed
+Casino reviews grid - rating value dropped to new line.
+Telephone display added in reviews.
+Fixed improper region placing in bookies reviews.
+Fixed writer's content substr encoding issue
+Fixed t function on top front review
+Fixed reviews and bookmakers filtering, adjusted to newest and recent grid only.

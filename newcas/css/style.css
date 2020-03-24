@@ -1,0 +1,365 @@
+/*
+GLOBAL
+*/
+body {
+  font-family: 'Roboto', 'Arial Condensed', 'Arial', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: .75;
+}
+
+/*
+Display
+*/
+.over-hidden {
+  overflow: hidden;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+.hov-eff a,
+.hov-eff a:hover {
+  transition: ease all .75s;
+}
+.hide{
+  display: none;
+}
+
+/*
+Additional Color Scheme
+*/
+.bg-black {
+  background: #222;
+}
+
+.bg-bright {
+  background: #f9f9f9;
+}
+
+.bg-gray {
+  background: #f1f1f1;
+}
+
+/*
+Typography
+*/
+.font-xs {
+  font-size: 8.5pt;
+}
+
+.font-s {
+  font-size: 9.5pt;
+}
+
+.font-sm {
+  font-size: 11.5pt;
+  line-height: 0;
+}
+
+.font-m {
+  font-size: inherit;
+}
+
+.font-lg {
+  font-size: 16.5pt;
+}
+
+.font-xl {
+  font-size: 18.5pt;
+}
+
+.font-xxl {
+  font-size: 21.5pt;
+}
+
+.font-giant {
+  font-size: 29.5pt;
+}
+
+.font-jumbo {
+  font-size: 37.25pt;
+}
+
+.font-jumbo {
+  font-size: 37.25pt;
+}
+
+.font-megalodon {
+  font-size: 50pt;
+}
+
+.line-height-1 {
+  line-height: 1;
+}
+
+/*
+Images
+*/
+img.filter-grayscale {
+  filter: grayscale(1) brightness(1.25);
+}
+.img-grayscale {
+    filter: grayscale(1) brightness(0.5) opacity(0.5);
+}
+/*
+###################################
+CUSTOM ELEMENTS
+###################################
+*/
+/*
+Rating
+*/
+.rating-overlay-a {
+  width: 0%;
+  transition: ease all 2s;
+  white-space: nowrap;
+}
+
+.rating-overlay-b {
+  top: 0;
+  left: 0;
+}
+
+/*
+Sticky Override
+*/
+.sticky-top {
+  z-index: 1;
+}
+
+/*
+Casino Review Page
+*/
+.gradient-dark,
+.gradient-dark-right {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+}
+.gradient-dark-top {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65) 25%, transparent 100%);
+}
+
+div#review_top_wide .row>div:nth-child(1) {
+  order: 1;
+}
+
+div#review_top_wide .row>div:nth-child(2) {
+  order: 2;
+}
+
+div#review_top_wide .row>div:nth-child(3) {
+  order: 3;
+}
+
+a.hover-in * {
+  transition: ease all .5s;
+}
+
+div#brand_bonuses .row>div:nth-child(3) {
+  height: 50pt;
+}
+
+/* Reviews Grid */
+.ribbon {
+  right: 10pt;
+}
+
+.ribbon-1 {
+  color: #fff;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #FF9800, #FFCA28);
+}
+/*
+Bonuses Cards
+*/
+.logo-icon {
+    max-width: 95pt;
+    height: 95pt;
+    border-radius: 50%;
+}
+/*
+Contact us Strip
+*/
+div#contact_us, .contact-title {
+  background: #4a4a4a url(/sites/default/files/bonus_bg.jpg);
+  background-blend-mode: multiply;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+div#contact_us .region>div {
+  flex: 0 0 100%;
+  align-self: center;
+}
+
+div#contact_us .region {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+Nav Menu
+*/
+.nav-menu a {
+  color: inherit;
+}
+
+.nav-menu a.active {
+  color: #8d8d8d;
+}
+
+/*
+Mobile menu
+*/
+.m-menu {
+  margin-left: -100%;
+  transition: linear all .33s;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  max-width: 85%;
+  top: 0;
+  box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.33);
+  z-index: 2;
+}
+
+.m-menu.active {
+  margin-left: 0%;
+  transition: linear all .33s;
+}
+
+.m-menu .nav-menu {
+  height: 100%;
+  flex-direction: column;
+  justify-content: start !important;
+}
+
+.m-menu .nav-menu li>* {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.m-menu .nav-menu li.expanded ul {
+  display: none;
+}
+
+.m-menu .nav-menu ul li {
+  margin: 0;
+}
+
+.m-menu .nav-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.m-menu li.expanded span:after {
+  content: "\e876";
+  font-family: 'Icomoon';
+  vertical-align: bottom;
+  font-weight: bold;
+  float: right;
+}
+
+.m-menu li.expanded.active span:after {
+  content: "\e874";
+}
+
+.m-menu li.expanded ul.menu {
+  background: #f5f5f5;
+  text-indent: 15pt;
+}
+
+/*
+Footer
+*/
+div#footer ul, div#footer ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+div#footer a.active {
+    opacity: .5;
+}
+div#footer a {
+    color: #fff;
+}
+#footer .font-weight-bold {
+  color: inherit !important;
+}
+
+/*
+Article Top
+*/
+.article-image-child {
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  padding-top: 10rem !important;
+}
+.article-image-box {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+/*
+Front Reviews
+*/
+div#front_strip_b {
+    background-image: url(/sites/default/files/c-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: -10% 120%;
+    background-blend-mode: soft-light;
+}
+div#recent_review {
+    background-image: url(/sites/default/files/rr_bg.svg);
+    background-position: -210% 100%;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+}
+/*
+FAQ
+*/
+.faq h3{
+  cursor: pointer;
+}
+div#front_strip_c {
+    background-image: url(/sites/default/files/c_bg.svg);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: 104% 150%;
+}
+/*
+Sliders
+*/
+.slider-content {
+    width: 90%;
+}
+.slider-action {
+    width: 5%;
+}
+/*
+Bonus Codes
+*/
+.top-slide-s {
+    top: -3rem;
+}
+.border-coupon {
+    border: 1px dashed #bababa;
+}

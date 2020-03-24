@@ -1,0 +1,232 @@
+@media screen and (min-width: 769px) {
+  .flex-5 {
+    flex: 1 1 20%;
+  }
+  .bonus-desc-middle {
+    font-size: 36.5pt;
+    line-height: 1;
+  }
+  .slider-content {
+      width: 100%;
+  }
+  .slider-action {
+      width: 0%;
+  }
+  .bonus-devider-a {
+      border-bottom: none;
+      border-right: 1px solid #ebebeb;
+  }
+  div#review_top_wide .row>div:nth-child(1) {
+    order: 1;
+  }
+
+  div#review_top_wide .row>div:nth-child(2) {
+    order: 2;
+  }
+
+  div#review_top_wide .row>div:nth-child(3) {
+    order: 3;
+  }
+  div#front_strip_b {
+    background-size: contain;
+    background-position: 0% 50%;
+  }
+  div#front_strip_c {
+    background-repeat: no-repeat;
+    background-position: 104% 150%;
+  }
+
+  div#recent_review{
+    background-position: -10% 30%;
+    background-size: 45%;
+  }
+
+  .gradient-dark {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75) 15%, transparent 75%);
+  }
+  .gradient-dark-top {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65) 25%, transparent 100%);
+  }
+  .gradient-dark-right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65) 25%, transparent 100%);
+  }
+
+  .bonus-desc-top,
+  .bonus-desc-bottom {
+    font-size: 10.5pt;
+  }
+
+  .font-md-m {
+    font-size: inherit !important;
+  }
+  .font-md-lg {
+    font-size: 16.5pt !important;
+  }
+
+  .font-md-xl {
+    font-size: 18.5pt !important;
+  }
+
+  .font-md-xxl {
+    font-size: 21.5pt !important;
+  }
+
+  .font-md-giant {
+    font-size: 29.5pt !important;
+  }
+
+  .font-md-jumbo {
+    font-size: 37.25pt !important;
+  }
+
+  div#contact_us .region>div {
+    flex: 0 0 50%;
+    align-self: center;
+  }
+
+  .front .slider-box>div:nth-child(1) {
+    order: 2;
+  }
+
+  .front .slider-box>div {
+    order: 1;
+  }
+
+  /*
+  Nav Memu
+  */
+  .nav-menu li * {
+    display: block;
+    margin-left: 10pt;
+    font-size: 10pt;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .nav-menu li {
+    list-style: none !important;
+    flex: 0 0 auto !important;
+    padding: 2rem 0 !important;
+    margin: 0 !important;
+    position: relative;
+  }
+  .nav-menu li.expanded > ul li {
+      padding: 0 !important;
+  }
+  .nav-menu>ul.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .nav-menu li.expanded>ul.menu li a {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #aeaeae;
+  }
+
+  .nav-menu li.expanded>ul.menu.active {
+    display: block;
+  }
+  .nav-menu li.expanded>ul.menu {
+    position: absolute;
+    right: 0;
+    background: #bbb;
+    min-width: 128pt;
+    margin: 0;
+    top: 0;
+    margin-top: 60.15pt;
+    box-shadow: 0px 9px 4px rgba(0, 0, 0, 0.15);
+    display: none;
+    padding: 0;
+    transition: ease all .5s;
+  }
+  .nav-menu span.nolink:after {
+    content: "\e876";
+    font-family: 'Icomoon';
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 7pt;
+    margin-left: 3pt;
+  }
+  .nav-menu span.nolink.active:after {
+    content: "\e874";
+  }
+/*
+  .nav-menu li.expanded:hover > ul {
+    display: block;
+  } */
+  .hover-in {
+    max-width: 0%;
+    white-space: nowrap;
+}
+.hover-in-parent:hover .hover-in{
+  max-width: 100%;
+  transition: ease all .5s;
+}
+  .article-image-box {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    max-height: 33vh;
+    overflow: hidden;
+  }
+  .article-image-box img {
+    margin-top: -15%;
+  }
+  .border-coupon {
+      border: 2px dashed #333;
+  }
+  /*
+  End of Min 769
+  */
+}
+
+@media screen and (min-width: 990px) {
+  .const-height-a {
+    height: 12.5vh;
+  }
+  .const-height-b {
+    height: 55pt;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  /* Slides */
+  .md-slide>div {
+    flex: 0 0 65%;
+    border: none !important;
+  }
+
+  .md-slide>div a {
+    background: none;
+  }
+
+  .md-slide {
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  .md-slide-wrapper {
+    flex: 0 0;
+  }
+  /* Reviews Grid */
+  div#reviews_grid .row > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  div#reviews_grid .row > div > div > div:nth-child(1) {
+    flex: 0 0 25%;
+  }
+  div#reviews_grid .row > div > div > div:nth-last-child(1) {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  div#reviews_grid .row > div > div > div:nth-child(2) {
+    flex: 0 0 75%;
+  }
+}

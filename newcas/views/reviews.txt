@@ -1,0 +1,364 @@
+$view = new view();
+$view->name = 'reviews';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Reviews';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = '<none>';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Footer: Global: Text area */
+$handler->display->display_options['footer']['area']['id'] = 'area';
+$handler->display->display_options['footer']['area']['table'] = 'views';
+$handler->display->display_options['footer']['area']['field'] = 'area';
+$handler->display->display_options['footer']['area']['content'] = '<a class="background-complimentary d-inline-block font-s font-weight-light p-2 shadow-sm text-uppercase text-white" href="/">See all Casinos</a>';
+$handler->display->display_options['footer']['area']['format'] = 'full_html';
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Field: Content: Brand */
+$handler->display->display_options['fields']['field_brand']['id'] = 'field_brand';
+$handler->display->display_options['fields']['field_brand']['table'] = 'field_data_field_brand';
+$handler->display->display_options['fields']['field_brand']['field'] = 'field_brand';
+/* Sort criterion: Field: Display Order (field_display_order) */
+$handler->display->display_options['sorts']['field_display_order_value']['id'] = 'field_display_order_value';
+$handler->display->display_options['sorts']['field_display_order_value']['table'] = 'field_data_field_display_order';
+$handler->display->display_options['sorts']['field_display_order_value']['field'] = 'field_display_order_value';
+/* Filter criterion: Content: Published status */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'casino_review' => 'casino_review',
+);
+/* Filter criterion: Content: Brand (field_brand) */
+$handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
+$handler->display->display_options['filters']['field_brand_tid']['field'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_brand_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_brand_tid']['vocabulary'] = 'brands';
+
+/* Display: Front Grid */
+$handler = $view->new_display('block', 'Front Grid', 'block');
+
+/* Display: Sidebar Casinos List */
+$handler = $view->new_display('block', 'Sidebar Casinos List', 'block_1');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['content'] = '<div class="p-3 bg-bright text-center text-uppercase border-bottom font-s">Most popular Casinos</div>';
+$handler->display->display_options['header']['area']['format'] = 'full_html';
+$handler->display->display_options['defaults']['footer'] = FALSE;
+/* Footer: Global: Text area */
+$handler->display->display_options['footer']['area']['id'] = 'area';
+$handler->display->display_options['footer']['area']['table'] = 'views';
+$handler->display->display_options['footer']['area']['field'] = 'area';
+$handler->display->display_options['footer']['area']['content'] = '<a href="#" class="d-block text-center p-3 bg-light border-top font-s text-uppercase color-main">See all casinos</a>';
+$handler->display->display_options['footer']['area']['format'] = 'clean_html';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Content: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['nid']['not'] = TRUE;
+
+/* Display: Header Newest Casino */
+$handler = $view->new_display('block', 'Header Newest Casino', 'block_2');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['footer'] = FALSE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+
+/* Display: Newest */
+$handler = $view->new_display('block', 'Newest', 'block_3');
+$handler->display->display_options['defaults']['footer'] = FALSE;
+/* Footer: Global: Text area */
+$handler->display->display_options['footer']['area']['id'] = 'area';
+$handler->display->display_options['footer']['area']['table'] = 'views';
+$handler->display->display_options['footer']['area']['field'] = 'area';
+$handler->display->display_options['footer']['area']['content'] = '<a class="border border-warning color-cta color-main d-inline-block font-s font-weight-normal p-2 shadow-sm text-uppercase" href="/">View All New Online Casinos</a>';
+$handler->display->display_options['footer']['area']['format'] = 'full_html';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Date went Live (field_live_date) */
+$handler->display->display_options['sorts']['field_live_date_value']['id'] = 'field_live_date_value';
+$handler->display->display_options['sorts']['field_live_date_value']['table'] = 'field_data_field_live_date';
+$handler->display->display_options['sorts']['field_live_date_value']['field'] = 'field_live_date_value';
+$handler->display->display_options['sorts']['field_live_date_value']['order'] = 'DESC';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published status */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'bookmaker' => 'bookmaker',
+  'casino_review' => 'casino_review',
+);
+/* Filter criterion: Content: Brand (field_brand) */
+$handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
+$handler->display->display_options['filters']['field_brand_tid']['field'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_brand_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_brand_tid']['vocabulary'] = 'brands';
+
+/* Display: Recently Reviewed */
+$handler = $view->new_display('block', 'Recently Reviewed', 'block_4');
+$handler->display->display_options['defaults']['footer'] = FALSE;
+/* Footer: Global: Text area */
+$handler->display->display_options['footer']['area']['id'] = 'area';
+$handler->display->display_options['footer']['area']['table'] = 'views';
+$handler->display->display_options['footer']['area']['field'] = 'area';
+$handler->display->display_options['footer']['area']['content'] = '<a class="border border-warning color-cta color-main d-inline-block font-s font-weight-normal p-2 shadow-sm text-uppercase" href="/">View All Online Casinos</a>';
+$handler->display->display_options['footer']['area']['format'] = 'full_html';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published status */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'bookmaker' => 'bookmaker',
+  'casino_review' => 'casino_review',
+);
+/* Filter criterion: Content: Brand (field_brand) */
+$handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
+$handler->display->display_options['filters']['field_brand_tid']['field'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_brand_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_brand_tid']['vocabulary'] = 'brands';
+
+/* Display: Filtered Grid */
+$handler = $view->new_display('block', 'Filtered Grid', 'block_5');
+$handler->display->display_options['defaults']['footer'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Content: Has taxonomy term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['anyall'] = '+';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+
+/* Display: Top 8 Casinos Only */
+$handler = $view->new_display('block', 'Top 8 Casinos Only', 'block_6');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '8';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published status */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'casino_review' => 'casino_review',
+);
+/* Filter criterion: Content: Brand (field_brand) */
+$handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
+$handler->display->display_options['filters']['field_brand_tid']['field'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_brand_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_brand_tid']['vocabulary'] = 'brands';
+
+/* Display: Top 8 Bookies Only */
+$handler = $view->new_display('block', 'Top 8 Bookies Only', 'block_7');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '8';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published status */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'bookmaker' => 'bookmaker',
+);
+/* Filter criterion: Content: Brand (field_brand) */
+$handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
+$handler->display->display_options['filters']['field_brand_tid']['field'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_brand_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_brand_tid']['vocabulary'] = 'brands';
+
+/* Display: Full Casinos List */
+$handler = $view->new_display('block', 'Full Casinos List', 'block_8');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'mini';
+$handler->display->display_options['pager']['options']['items_per_page'] = '16';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['defaults']['footer'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published status */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'casino_review' => 'casino_review',
+);
+/* Filter criterion: Content: Brand (field_brand) */
+$handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
+$handler->display->display_options['filters']['field_brand_tid']['field'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_brand_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_brand_tid']['vocabulary'] = 'brands';
+
+/* Display: Full Bookies List */
+$handler = $view->new_display('block', 'Full Bookies List', 'block_9');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'mini';
+$handler->display->display_options['pager']['options']['items_per_page'] = '16';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['defaults']['footer'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published status */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'bookmaker' => 'bookmaker',
+);
+/* Filter criterion: Content: Brand (field_brand) */
+$handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
+$handler->display->display_options['filters']['field_brand_tid']['field'] = 'field_brand_tid';
+$handler->display->display_options['filters']['field_brand_tid']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_brand_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_brand_tid']['vocabulary'] = 'brands';
+$translatables['reviews'] = array(
+  t('Master'),
+  t('<none>'),
+  t('more'),
+  t('Apply'),
+  t('Reset'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('<a class="background-complimentary d-inline-block font-s font-weight-light p-2 shadow-sm text-uppercase text-white" href="/">See all Casinos</a>'),
+  t('Brand'),
+  t('Front Grid'),
+  t('Sidebar Casinos List'),
+  t('<div class="p-3 bg-bright text-center text-uppercase border-bottom font-s">Most popular Casinos</div>'),
+  t('<a href="#" class="d-block text-center p-3 bg-light border-top font-s text-uppercase color-main">See all casinos</a>'),
+  t('All'),
+  t('Header Newest Casino'),
+  t('Newest'),
+  t('<a class="border border-warning color-cta color-main d-inline-block font-s font-weight-normal p-2 shadow-sm text-uppercase" href="/">View All New Online Casinos</a>'),
+  t('Recently Reviewed'),
+  t('<a class="border border-warning color-cta color-main d-inline-block font-s font-weight-normal p-2 shadow-sm text-uppercase" href="/">View All Online Casinos</a>'),
+  t('Filtered Grid'),
+  t('Top 8 Casinos Only'),
+  t('Top 8 Bookies Only'),
+  t('Full Casinos List'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« first'),
+  t('‹ previous'),
+  t('next ›'),
+  t('last »'),
+  t('Full Bookies List'),
+);

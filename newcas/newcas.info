@@ -1,0 +1,41 @@
+name = New Casino Engine
+description = Casino Management Engine by Adzz LTD.
+version = "7.x-1.5"
+core = "7.x"
+project status url = http://adzzdev.com/drupdates/release-history
+project = "newcas"
+screenshot = screen.jpg
+
+stylesheets[all][] = css/slider.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/media.css
+
+scripts[] = scripts/slider.js
+scripts[] = scripts/script.js
+
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[breadcrumbs] = Breadcrumbs
+regions[content] = Content
+regions[sidebar_first] = Sidebar
+regions[top] = Top
+regions[mid] = Middle Strip
+regions[bottom] = Bottom Strip
+regions[stats] = Stats Strip
+regions[content_a] = Content Strip A
+regions[content_b] = Content Strip B
+regions[content_c] = Content Strip C
+regions[contact] = Contact Strip
+regions[top_footer] = Top Footer
+regions[footer_a] = Footer Block A
+regions[footer_b] = Footer Block B
+regions[footer_c] = Footer Block C
+regions[footer_d] = Footer Block D
+regions[footer] = Footer
+regions[hidden] = Hidden Content
+
+settings[color_main] = eee
+settings[color_second] = eee
+settings[color_complimentary] = eee
+settings[color_cta] = eee
